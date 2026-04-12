@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Notes",
+  "version": "1.0.0",
+  "description": "Generate concise interview study notes from YouTube videos using Claude Sonnet.",
+  "permissions": ["storage", "sidePanel"],
+  "host_permissions": [
+    "https://www.youtube.com/*",
+    "https://api.anthropic.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/watch*"],
+      "js": ["content.js"],
+      "css": ["content.css"]
+    }
+  ],
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "action": {
+    "default_title": "YouTube Notes"
+  }
+}

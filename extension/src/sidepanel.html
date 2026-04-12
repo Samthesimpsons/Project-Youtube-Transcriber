@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Study Notes</title>
+    <link rel="stylesheet" href="sidepanel.css" />
+  </head>
+  <body>
+    <div id="app">
+
+      <div id="view-empty" class="view">
+        <div class="centered-state">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M14 2H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6zm-1 7V3.5L18.5 9H13zM6 20V4h5v7h7v9H6zm2-5h8v2H8zm0-4h4v2H8z"/>
+          </svg>
+          <p>Open a YouTube video and click the notes button in the player controls.</p>
+        </div>
+      </div>
+
+      <div id="view-loading" class="view hidden">
+        <div class="centered-state">
+          <div class="spinner"></div>
+          <p>Generating notes...</p>
+        </div>
+      </div>
+
+      <div id="view-error" class="view hidden">
+        <div class="centered-state error">
+          <p id="error-message"></p>
+          <a href="#" id="open-options">Open Settings</a>
+        </div>
+      </div>
+
+      <div id="view-ready" class="view hidden">
+        <header>
+          <h1 id="notes-title"></h1>
+          <button id="download-btn" type="button" title="Download as .md">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+            </svg>
+          </button>
+        </header>
+        <div id="notes-content"></div>
+      </div>
+
+    </div>
+    <script src="sidepanel.js"></script>
+  </body>
+</html>

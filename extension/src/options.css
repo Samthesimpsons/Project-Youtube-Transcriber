@@ -1,0 +1,149 @@
+:root {
+	--bg: #0f0f0f;
+	--surface: #1a1a1a;
+	--border: #2a2a2a;
+	--text: #e8e8e8;
+	--text-muted: #888;
+	--accent: #3ea6ff;
+	--error: #ff6b6b;
+	--success: #4caf50;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: var(--bg);
+	color: var(--text);
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+	font-size: 14px;
+	min-height: 100vh;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	padding: 48px 20px;
+}
+
+main {
+	width: 100%;
+	max-width: 480px;
+}
+
+h1 {
+	font-size: 20px;
+	font-weight: 600;
+	margin-bottom: 36px;
+}
+
+section {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin-bottom: 28px;
+}
+
+label {
+	font-size: 12px;
+	font-weight: 600;
+	color: var(--text-muted);
+	text-transform: uppercase;
+	letter-spacing: 0.06em;
+}
+
+.input-row {
+	display: flex;
+	gap: 8px;
+}
+
+input[type="password"],
+input[type="text"] {
+	flex: 1;
+	background: var(--surface);
+	border: 1px solid var(--border);
+	border-radius: 6px;
+	color: var(--text);
+	font-family: monospace;
+	font-size: 13px;
+	padding: 10px 12px;
+	outline: none;
+	transition: border-color 0.15s;
+}
+
+input:focus {
+	border-color: var(--accent);
+}
+
+#toggle-visibility {
+	background: var(--surface);
+	border: 1px solid var(--border);
+	border-radius: 6px;
+	color: var(--text-muted);
+	cursor: pointer;
+	padding: 0 10px;
+	display: flex;
+	align-items: center;
+	transition:
+		border-color 0.15s,
+		color 0.15s;
+}
+
+#toggle-visibility:hover {
+	border-color: var(--accent);
+	color: var(--accent);
+}
+
+#toggle-visibility svg {
+	width: 20px;
+	height: 20px;
+}
+
+.hint {
+	font-size: 12px;
+	color: var(--text-muted);
+	line-height: 1.6;
+}
+
+.hint strong {
+	color: var(--text);
+}
+
+.actions {
+	display: flex;
+	align-items: center;
+	gap: 14px;
+}
+
+#save-btn {
+	background: var(--accent);
+	border: none;
+	border-radius: 6px;
+	color: #000;
+	cursor: pointer;
+	font-size: 14px;
+	font-weight: 600;
+	padding: 10px 28px;
+	transition: opacity 0.15s;
+}
+
+#save-btn:hover {
+	opacity: 0.85;
+}
+
+#status-message {
+	font-size: 13px;
+}
+
+#status-message.success {
+	color: var(--success);
+}
+
+#status-message.error {
+	color: var(--error);
+}
+
+.hidden {
+	display: none;
+}

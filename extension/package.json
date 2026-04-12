@@ -1,0 +1,21 @@
+{
+  "name": "yt-notes-extension",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "node build.mjs",
+    "watch": "node build.mjs --watch",
+    "format": "biome format --write src",
+    "lint": "biome lint src",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "marked": "18.0.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.4.11",
+    "@types/chrome": "0.1.40",
+    "esbuild": "0.28.0",
+    "typescript": "6.0.2"
+  }
+}

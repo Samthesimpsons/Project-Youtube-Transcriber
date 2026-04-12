@@ -1,0 +1,6 @@
+pre-commit:
+  commands:
+    format:
+      run: uv run poe format
+    ext-format:
+      run: uv run poe ext-format
