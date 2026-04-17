@@ -12,6 +12,11 @@
 	transition: opacity 0.15s ease;
 }
 
+.yt-notes-btn svg {
+	width: 24px;
+	height: 24px;
+}
+
 .yt-notes-btn:hover {
 	opacity: 1;
 }
